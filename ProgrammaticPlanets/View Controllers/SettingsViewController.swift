@@ -10,7 +10,7 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    var shouldShowPlutoSwitch: UISwitch!
+    var shouldShowPlutoSwitch = UISwitch()
 
     // MARK: - View Lifecycle
     

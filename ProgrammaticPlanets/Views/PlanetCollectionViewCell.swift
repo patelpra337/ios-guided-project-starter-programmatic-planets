@@ -10,16 +10,17 @@ import UIKit
 
 class PlanetCollectionViewCell: UICollectionViewCell {
     
-    private var imageView: UIImageView!
-    private var nameLabel: UILabel!
+    private var imageView = UIImageView()
+    private var nameLabel = UILabel()
     
-    var planet: Planet! {
+    var planet: Planet? {
         didSet {
             updateViews()
         }
     }
     
     private func updateViews() {
+        guard let planet = planet else { return }
         imageView.image = planet.image
         nameLabel.text = planet.name
     }
